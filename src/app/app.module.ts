@@ -4,15 +4,21 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { StateComponent } from './state/state.component';
+import { RouterModule } from "@angular/router";
+import { AppRoutingModule } from "./app-routing/app-routing.module";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    StateComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
