@@ -10,6 +10,7 @@ import { AppRoutingModule } from "./app-routing/app-routing.module";
 import { StateSearchComponent } from './state-search/state-search.component';
 import { HomeComponent } from './home/home.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { PoliticalPartiesComponent } from './political-parties/political-parties.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
     StateComponent,
     StateSearchComponent,
     HomeComponent,
-    NavBarComponent
+    NavBarComponent,
+    PoliticalPartiesComponent
   ],
   imports: [
     BrowserModule,

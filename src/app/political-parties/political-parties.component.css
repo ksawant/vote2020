@@ -1,0 +1,10 @@
+.container {
+  margin-top: 70px;
+}
+.card-text {
+  font-size: large;
+}
+.card-img-top {
+  height: auto;
+  width: 286px;
+}
