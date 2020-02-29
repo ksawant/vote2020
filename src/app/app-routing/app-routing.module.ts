@@ -5,9 +5,11 @@ import {PollingSearchComponent} from "../polling-search/polling-search.component
 import {HomeComponent} from "../home/home.component";
 import {PoliticalPartiesComponent} from "../political-parties/political-parties.component";
 import {RegisterSearchComponent} from "../register-search/register-search.component";
+import {CandidateComponent} from "../candidate/candidate.component";
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'candidate', component: CandidateComponent},
   { path: 'register-state-search', component: RegisterSearchComponent },
   { path: 'polling-state-search', component: PollingSearchComponent },
   { path: 'polling/:state', component: StatePollingComponent },

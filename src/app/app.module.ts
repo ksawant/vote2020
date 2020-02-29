@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { PoliticalPartiesComponent } from './political-parties/political-parties.component';
 import { RegisterSearchComponent } from './register-search/register-search.component';
+import { CandidateComponent } from './candidate/candidate.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { RegisterSearchComponent } from './register-search/register-search.compo
     HomeComponent,
     NavBarComponent,
     PoliticalPartiesComponent,
-    RegisterSearchComponent
+    RegisterSearchComponent,
+    CandidateComponent
   ],
   imports: [
     BrowserModule,
