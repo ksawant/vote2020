@@ -1,3 +1,11 @@
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-159292069-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-159292069-1');
+</script>
 <div class="jumbotron">
   <div class="container">
     <h1 class="display-3">Hello, future voters!</h1>
@@ -8,12 +16,12 @@
     <div class="col-md-4">
       <h2>Candidates</h2>
       <p>Find information on who the Presidential candidates are and where they stands on the major issues</p>
-      <p><a class="btn btn-secondary" href="#" role="button">View information »</a></p>
+      <p><a class="btn btn-secondary" routerLink="candidates" role="button">View information »</a></p>
     </div>
     <div class="col-md-4">
       <h2>Voting Information</h2>
       <p>Information on how to Register to Vote in local, state, and federal elections</p>
-      <p><a class="btn btn-secondary" href="register-state-search" role="button">View information »</a></p>
+      <p><a class="btn btn-secondary" routerLink="register-state-search" role="button">View information »</a></p>
     </div>
     <div class="col-md-4">
       <h2>Political Parties</h2>
