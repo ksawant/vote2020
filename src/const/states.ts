@@ -1,60 +1,137 @@
 export class States {
   static states = ['Alabama',
-    'alaska',
-    'arizona',
-    'arkansas',
-    'california',
-    'colorado',
-    'connecticut',
-    'delaware',
-    'florida',
-    'georgia',
-    'hawaii',
-    'idaho',
-    'illinois',
-    'indiana',
-    'iowa',
-    'kansas',
-    'kentucky',
-    'louisiana',
-    'maine',
-    'maryland',
-    'massachusetts',
-    'michigan',
-    'minnesota',
-    'mississippi',
-    'missouri',
-    'montana',
-    'nebraska',
-    'nevada',
-    'new hampshire',
-    'new jersey',
-    'new mexico',
-    'new york',
-    'north carolina',
-    'north dakota',
-    'ohio',
-    'oklahoma',
-    'oregon',
-    'pennsylvania',
-    'rhode island',
-    'south carolina',
-    'south dakota',
-    'tennessee',
-    'texas',
-    'utah',
-    'vermont',
-    'virginia',
-    'washington',
-    'west virginia',
-    'wisconsin',
-    'wyoming'];
+    'Alaska',
+    'Arizona',
+    'Arkansas',
+    'California',
+    'Colorado',
+    'Connecticut',
+    'Delaware',
+    'Florida',
+    'Georgia',
+    'Hawaii',
+    'Idaho',
+    'Illinois',
+    'Indiana',
+    'Iowa',
+    'Kansas',
+    'Kentucky',
+    'Louisiana',
+    'Maine',
+    'Maryland',
+    'Massachusetts',
+    'Michigan',
+    'Minnesota',
+    'Mississippi',
+    'Missouri',
+    'Montana',
+    'Nebraska',
+    'Nevada',
+    'New Hampshire',
+    'New Jersey',
+    'New Mexico',
+    'New York',
+    'North Carolina',
+    'North Dakota',
+    'Ohio',
+    'Oklahoma',
+    'Oregon',
+    'Pennsylvania',
+    'Rhode Island',
+    'South Carolina',
+    'South Dakota',
+    'Tennessee',
+    'Texas',
+    'Utah',
+    'Vermont',
+    'Virginia',
+    'Washington',
+    'West Virginia',
+    'Wisconsin',
+    'Wyoming'];
+
+  static statesAbbreviation = ['AL',
+    'AK',
+    'AZ',
+    'AR',
+    'CA',
+    'CO',
+    'CT',
+    'DE',
+    'FL',
+    'GA',
+    'HI',
+    'ID',
+    'IL',
+    'IN',
+    'IA',
+    'KS',
+    'KY',
+    'LA',
+    'ME',
+    'MD',
+    'MA',
+    'MI',
+    'MN',
+    'MS',
+    'MO',
+    'MT',
+    'NE',
+    'NV',
+    'NH',
+    'NJ',
+    'NM',
+    'NY',
+    'NC',
+    'ND',
+    'OH',
+    'OK',
+    'OR',
+    'PA',
+    'RI',
+    'SC',
+    'SD',
+    'TN',
+    'TX',
+    'UT',
+    'VT',
+    'VA',
+    'WA',
+    'WV',
+    'WI',
+    'WY'];
 
   static doesStateExist(state: string) {
-    state = state.toLowerCase();
-    const firstLetter = state.charAt(0);
-    state = firstLetter.toUpperCase() + state.split(firstLetter)[1];
-    console.log(state);
-    return this.states.indexOf(state) != -1;
+    const lowerCaseState = state.toLowerCase().trim();
+    let bool = false;
+    this.states.forEach(s => {
+
+      if (s.toLowerCase().trim() == lowerCaseState) {
+        bool = true;
+      }
+    });
+    return bool;
+  }
+
+  static doesStateAbbreviationExist(state: string) {
+    const lowerCaseState = state.toLowerCase().trim();
+    let bool = false;
+    this.statesAbbreviation.forEach(s => {
+      if (s.toLowerCase().trim() == lowerCaseState) {
+        bool = true;
+      }
+    });
+    return bool;
+  }
+
+  static getStateAbbreviation(state: any) {
+    const lowerCaseState = state.toLowerCase().trim();
+    let abbreviation = null;
+    this.states.forEach(s => {
+      if (s.toLowerCase().trim() == lowerCaseState) {
+        abbreviation = this.statesAbbreviation[this.states.indexOf(s)].toLowerCase();
+      }
+    });
+    return abbreviation;
   }
 }

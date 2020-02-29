@@ -6,14 +6,32 @@
 
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" routerLink="/">Home <span class="sr-only">(current)</span></a>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/">Home</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Candidates</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Voting</a>
+        <a class="nav-link" routerLink="register-state-search">Register to Vote</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
+           aria-haspopup="true" aria-expanded="false">
+          Voting
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" routerLink="polling-state-search">Polls by State</a>
+          <a class="dropdown-item"
+             href="https://www.ncsl.org/research/elections-and-campaigns/2020-state-primary-election-dates.aspx"
+             target="_blank">
+            Dates By State</a>
+          <a class="dropdown-item"
+             href="https://www.latimes.com/politics/key-dates-on-2020-primary-and-presidential-election-calendar"
+             target="_blank">
+            Timeline
+          </a>
+        </div>
       </li>
       <li class="nav-item">
         <a class="nav-link" routerLink="political-parties">Political Parties</a>

@@ -1,0 +1,12 @@
+<div class="container">
+  <h1 class="bd-title" id="content">Register to Vote</h1>
+  <p class="bd-lead">Search for state that you wish to register to vote in.</p>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="inputGroup-sizing-default">State</span>
+    </div>
+    <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"
+           (keyup.enter)="findURLByState($event)" [ngClass]="hasRun === true && valid === false ? 'is-invalid' : ''">
+  </div>
+  <a *ngIf="valid" href="{{url}}" target="_blank" class="btn btn-success">Go to vote.gov »</a>
+</div>

@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { StateSearchComponent } from './state-search.component';
+import { PollingSearchComponent } from './polling-search.component';
 
 describe('StateSearchComponent', () => {
-  let component: StateSearchComponent;
-  let fixture: ComponentFixture<StateSearchComponent>;
+  let component: PollingSearchComponent;
+  let fixture: ComponentFixture<PollingSearchComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ StateSearchComponent ]
+      declarations: [ PollingSearchComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(StateSearchComponent);
+    fixture = TestBed.createComponent(PollingSearchComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -4,22 +4,24 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { StateComponent } from './state/state.component';
+import { StatePollingComponent } from './state-polling/state-polling.component';
 import { RouterModule } from "@angular/router";
 import { AppRoutingModule } from "./app-routing/app-routing.module";
-import { StateSearchComponent } from './state-search/state-search.component';
+import { PollingSearchComponent } from './polling-search/polling-search.component';
 import { HomeComponent } from './home/home.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { PoliticalPartiesComponent } from './political-parties/political-parties.component';
+import { RegisterSearchComponent } from './register-search/register-search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StateComponent,
-    StateSearchComponent,
+    StatePollingComponent,
+    PollingSearchComponent,
     HomeComponent,
     NavBarComponent,
-    PoliticalPartiesComponent
+    PoliticalPartiesComponent,
+    RegisterSearchComponent
   ],
   imports: [
     BrowserModule,
