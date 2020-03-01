@@ -9,7 +9,7 @@
            (keyup.enter)="findURLByState()" [ngClass]="hasRun === true && valid === false ? 'is-invalid' : ''"
            [(ngModel)]="stateName">
     <div class="input-group-append">
-      <button class="btn btn-outline-secondary" type="button" (click)="findURLByState()">Button</button>
+      <button class="btn btn-outline-secondary" type="button" (click)="findURLByState()">Submit</button>
     </div>
   </div>
   <a *ngIf="valid" href="{{url}}" target="_blank" class="btn btn-success">Go to vote.gov »</a>
