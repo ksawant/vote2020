@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
 import {States} from "../../const/states";
+import {GoogleAnalyticsService} from "../google-analytics.service";
 
 @Component({
   selector: 'app-register-search',
@@ -9,7 +10,7 @@ import {States} from "../../const/states";
 })
 export class RegisterSearchComponent implements OnInit {
 
-  constructor(public router: Router) { }
+  constructor(public router: Router, public googleAnalyticsService: GoogleAnalyticsService) { }
 
   title: string;
   valid: boolean;
@@ -23,6 +24,9 @@ export class RegisterSearchComponent implements OnInit {
   }
 
   findURLByState(event: any) {
+    this
+      .googleAnalyticsService
+      .eventEmitter("search", "search", "findURLByState", "search", 1);
     this.hasRun = true;
     const state = event.target.value;
     let abbreviation = States.getStateAbbreviation(state);

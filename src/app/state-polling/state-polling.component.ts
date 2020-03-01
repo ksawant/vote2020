@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {States} from "../../const/states";
+import {GoogleAnalyticsService} from "../google-analytics.service";
 
 @Component({
   selector: 'app-state',
@@ -12,7 +13,7 @@ export class StatePollingComponent implements OnInit {
   url = '';
   private bool = false;
   private sub: any;
-  constructor(private route: ActivatedRoute, private router: Router) { }
+  constructor(private route: ActivatedRoute, private router: Router, public googleAnalyticsService: GoogleAnalyticsService) { }
 
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
@@ -27,6 +28,9 @@ export class StatePollingComponent implements OnInit {
   }
 
   load() {
+    this
+      .googleAnalyticsService
+      .eventEmitter("search", "search", "loadingIFrame", "search", 1);
     if(this.bool === false) {
       (<HTMLIFrameElement>document.getElementById("stateIFrame")).src = this.url;
       this.bool = true;

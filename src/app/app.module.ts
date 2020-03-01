@@ -14,6 +14,8 @@ import { PoliticalPartiesComponent } from './political-parties/political-parties
 import { RegisterSearchComponent } from './register-search/register-search.component';
 import { CandidateComponent } from './candidate/candidate.component';
 
+import { GoogleAnalyticsService } from './google-analytics.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +34,7 @@ import { CandidateComponent } from './candidate/candidate.component';
     RouterModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [GoogleAnalyticsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
