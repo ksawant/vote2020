@@ -15,21 +15,21 @@ export class PollingSearchComponent implements OnInit {
   title: string;
   valid: boolean;
   hasRun: boolean;
+  stateName: any;
   ngOnInit() {
     this.title = '2020 Election Information';
     this.hasRun = false;
     this.valid = false;
   }
 
-  findURLByState(event: any) {
+  findURLByState() {
     this
       .googleAnalyticsService
       .eventEmitter("search", "search", "findURLByState", "search", 1);
     this.hasRun = true;
-    const state = event.target.value;
-    if(States.doesStateExist(state)) {
+    if(States.doesStateExist(this.stateName)) {
       this.valid = true;
-      this.router.navigate(['polling/' + state]);
+      this.router.navigate(['polling/' + this.stateName]);
     } else {
       this.valid = false;
     }

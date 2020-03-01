@@ -16,6 +16,7 @@ export class RegisterSearchComponent implements OnInit {
   valid: boolean;
   hasRun: boolean;
   url: string;
+  stateName: any;
   ngOnInit() {
     this.title = '2020 Election Information';
     this.hasRun = false;
@@ -23,13 +24,12 @@ export class RegisterSearchComponent implements OnInit {
     this.url = '';
   }
 
-  findURLByState(event: any) {
+  findURLByState() {
     this
       .googleAnalyticsService
       .eventEmitter("search", "search", "findURLByState", "search", 1);
     this.hasRun = true;
-    const state = event.target.value;
-    let abbreviation = States.getStateAbbreviation(state);
+    let abbreviation = States.getStateAbbreviation(this.stateName);
     if(abbreviation != null) {
       this.valid = true;
       this.url = 'https://www.vote.gov/register/' + abbreviation + '/';

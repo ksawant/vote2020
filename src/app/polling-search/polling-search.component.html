@@ -6,7 +6,11 @@
       <span class="input-group-text" id="inputGroup-sizing-default">State</span>
     </div>
     <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"
-           (keyup.enter)="findURLByState($event)" [ngClass]="hasRun === true && valid === false ? 'is-invalid' : ''">
+           (keyup.enter)="findURLByState()" [ngClass]="hasRun === true && valid === false ? 'is-invalid' : ''"
+           [(ngModel)]="stateName">
+    <div class="input-group-append">
+      <button class="btn btn-outline-secondary" type="button" (click)="findURLByState()">Button</button>
+    </div>
   </div>
 </div>
 
